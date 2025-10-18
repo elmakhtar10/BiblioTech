@@ -36,4 +36,5 @@ Route::middleware('auth')->group(function () {
     // Auteurs
     Route::get('/authors', [AuthorController::class, 'index'])->name('authors');
 //    Route::get('/authors', [AuthorController::class, 'getAuthors'])->name('list.authors');
+    Route::get('/books', [\App\Http\Controllers\Books\BookController::class, 'index'])->name('books.home');
 });
