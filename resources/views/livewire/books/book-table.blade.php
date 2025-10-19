@@ -61,7 +61,7 @@
                         @foreach($books as $book)
                             <tr wire:key="{{$book->id}}">
                                 <td>
-                                    <img src="{{ asset('storage/' . $book->photo) }}"
+                                    <img src="{{ asset('storage/' . $book->image) }}"
                                          alt="Photo auteur"
                                          style="width:50px; height:50px; object-fit:cover; border-radius:50%;">
                                 </td>
@@ -117,7 +117,7 @@
 
                     <!-- Pagination -->
                     <div>
-{{--                        {{$book->links()}}--}}
+                        {{$books->links()}}
                     </div>
 
                 </div>

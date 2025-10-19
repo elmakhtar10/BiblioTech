@@ -35,6 +35,12 @@ class CreateAuthor extends Component
     public function saveAuthor()
     {
         $this->validate();
+        $existingAuthor = Author::where('prenom', $this->prenom)
+                            ->where('nom', $this->nom)->first();
+        if($existingAuthor){
+            $this->addError('prenom', 'Cet auteur existe deja.');
+            return;
+        }
 
         $filename = $this->photo ? $this->photo->store('authors', 'public') : null;
 

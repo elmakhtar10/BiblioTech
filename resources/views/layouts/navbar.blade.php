@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('authors')}}">Auteurs</a>
+                    <a class="nav-link {{request()->routeIs('authors') ? 'active' : ''}}" aria-current="page" href="{{route('authors')}}">Auteurs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('books.home')}}">Livres</a>
+                    <a class="nav-link {{request()->routeIs('books.home') ? 'active' : ''}}" href="{{route('books.home')}}">Livres</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

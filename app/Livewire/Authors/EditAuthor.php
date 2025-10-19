@@ -44,11 +44,11 @@ class EditAuthor extends Component
         $this->successMessage = "Auteur Modifier avec success";
     }
     public function closeEditForm(){
-        $this->reset(['prenom', 'nom', 'biographie', 'photo']);
         $this->showEditForm = false;
     }
     public function render()
     {
+
         return view('livewire.authors.edit-author');
     }
 }

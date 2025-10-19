@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
     public function index(){
-        return view('layouts.app');
+        return view('layouts.home');
     }
     public function showLoginForm(){
         return view('auth.login');
