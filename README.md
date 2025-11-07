@@ -52,10 +52,10 @@ L’application offre une interface moderne et intuitive, facilitant la gestion 
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/yourusername/BiblioTech.git
+git clone https://github.com/elmakhtar10/BiblioTech
 
 # Accéder au dossier du projet
-cd BiblioTech
+cd Gestion_Bibliotheque
 
 # Installer les dépendances
 composer install
@@ -74,33 +74,6 @@ php artisan migrate
 php artisan serve
 ```
 
-### 🐳 Installation via Docker
-
-Utilisez le fichier `docker-compose.yml` fourni pour exécuter l’application dans un conteneur Docker.
-
----
-
-## 🎯 Utilisation
-
-### Exemple simple
-
-```javascript
-// Exemple d’ajout d’un livre via l’API
-const book = {
-    titre: 'Gatsby le Magnifique',
-    nombre_exemplaires: 5,
-    description: 'Un roman de F. Scott Fitzgerald',
-    date_publication: '1925-04-10',
-    date_creation: '2023-10-01',
-    date_modification: '2023-10-01',
-    author_id: 1,
-    image: 'books/gatsby.jpg'
-};
-
-const response = await axios.post('/api/books', book);
-console.log(response.data);
-```
-
 ### Utilisation avancée
 
 * Personnaliser les variables dans le fichier `.env`.
@@ -111,7 +84,7 @@ console.log(response.data);
 ## 📁 Structure du projet
 
 ```
-BiblioTech/
+Gestion_Bibliotheque/
 ├── app/
 │   ├── Console/
 │   ├── Exceptions/
