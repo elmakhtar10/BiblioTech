@@ -10,10 +10,10 @@ class Author extends Model
     protected $fillable = ['nom', 'prenom', 'biographie', 'photo'];
     public $timestamps = false;
     use HasFactory;
-    public function getPhotoUrlAttribute()
-    {
-        return $this->photo ? asset('storage/authors/' . $this->photo) : asset('storage/authors/default.jpg');
-    }
+//    public function getPhotoUrlAttribute()
+//    {
+//        return $this->photo ? asset('storage/authors/' . $this->photo) : asset('storage/authors/default.jpg');
+//    }
 
     public function scopeSearch($query, $value)
     {
