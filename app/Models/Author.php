@@ -18,6 +18,7 @@ class Author extends Model
     public function scopeSearch($query, $value)
     {
         $query->where('nom', 'like', "%{$value}%")
-            ->orWhere('prenom', 'like', "%{$value}%");
+            ->orWhere('prenom', 'like', "%{$value}%")
+            ->orderBy('nom');
     }
 }

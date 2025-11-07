@@ -15,6 +15,7 @@ class Book extends Model
     public function scopeSearch($query, $value){
         $query->where('titre', 'like', "%{$value}%")
                 ->orWhere('authors.nom', 'like', "%{$value}%")
-                ->orWhere('authors.prenom', 'like', "%{$value}%");
+                ->orWhere('authors.prenom', 'like', "%{$value}%")
+                ->orderBy('titre');
     }
 }

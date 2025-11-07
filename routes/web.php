@@ -3,6 +3,10 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Authors\AuthorController;
+use App\Http\Controllers\History\HistoryPerSubscriberController;
+use App\Http\Controllers\ProfileController;
+use App\Livewire\History\HistoryPerSubscriber;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,13 +32,39 @@ Route::middleware('guest')->group(function () {
 });
 
 // Routes pour les utilisateurs connectés
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'check.status', 'is_admin'])->group(function () {
     // Page d'accueil
-    Route::get('/home', [LoginController::class, 'index'])->name('home');
+    Route::get('/reservation', [LoginController::class, 'index'])->name('reservation');
     // Déconnexion
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     // Auteurs
-    Route::get('/authors', [AuthorController::class, 'index'])->name('authors');
+    Route::get('/auteurs', [AuthorController::class, 'index'])->name('authors');
 //    Route::get('/authors', [AuthorController::class, 'getAuthors'])->name('list.authors');
-    Route::get('/books', [\App\Http\Controllers\Books\BookController::class, 'index'])->name('books.home');
+    Route::get('/livres', [\App\Http\Controllers\Books\BookController::class, 'index'])->name('books.home');
+    Route::get('/reservation/livre', [\App\Http\Controllers\Reservation\ReservationController::class, 'index'])->name('make.reservation');
+    Route::get('/abonnes', [\App\Http\Controllers\Subscribers\SubscribersController::class, 'index'])->name('subscribers');
+    Route::get('/historiques', [\App\Http\Controllers\History\HistoryController::class, 'index'])->name('historiques');
+    Route::get('/reservation/statistiques', [\App\Http\Controllers\Reservation\StatistiquesController::class, 'index'])->name('statistiques');
+
+    Route::get('/historique/{id}', [HistoryPerSubscriberController::class, 'show'])->name('historique.show');
+    Route::get('/profile/picture', [ProfileController::class, 'edit'])->name('profile.picture');
+
 });
+
+Route::middleware(['auth', 'check.status'])->group(function () {
+    // Page d'accueil
+    Route::get('/reservation', [LoginController::class, 'index'])->name('reservation');
+    // Déconnexion
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('/reservation/livre', [\App\Http\Controllers\Reservation\ReservationController::class, 'index'])->name('make.reservation');
+    Route::get('/historique/{id}', [HistoryPerSubscriberController::class, 'show'])->name('historique.show');
+    Route::get('/profile/picture', [ProfileController::class, 'edit'])->name('profile.picture');
+
+});
+
+Route::get('/suspended', function () {
+    Auth::logout();
+    return view('auth.suspended');
+})->name('suspended');
+
+

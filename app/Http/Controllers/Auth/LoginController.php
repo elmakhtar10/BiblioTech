@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
     public function index(){
-        return view('layouts.home');
+        return view('reservations.index');
     }
     public function showLoginForm(){
         return view('auth.login');
@@ -21,7 +21,7 @@ class LoginController extends Controller
         $remember = $request->boolean('remember');
         if(Auth::attempt($credentials, $remember)){
             $request->session()->regenerate();
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('reservation'));
         }
         return back()->with('error', 'Mot de passe ou email invalide.')->withInput();
     }

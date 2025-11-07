@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en" class="h-100">
 <head>
@@ -42,6 +41,7 @@
             }
         }
     </style>
+
 
 
     <!-- Custom styles for this template -->
