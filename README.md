@@ -1,66 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📚 BiblioTech
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge\&logo=laravel\&logoColor=white)
+![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge\&logo=laravel\&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge\&logo=mysql\&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+![Build Passing](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
+![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Aperçu
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**BiblioTech** est un système complet de gestion de bibliothèque développé avec **Laravel** et **Livewire**.
+Il permet aux bibliothécaires et aux utilisateurs de gérer efficacement les livres, les abonnés et les réservations.
+L’application offre une interface moderne et intuitive, facilitant la gestion des emprunts, des retours et des réservations.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Fonctionnalités
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* 📘 **Gestion des livres** : Ajouter, modifier et supprimer des livres.
+* 📅 **Système de réservation** : Gérer les réservations et suivre leur état.
+* 👥 **Gestion des abonnés** : Enregistrer et suivre les abonnés.
+* 📊 **Statistiques** : Consulter les statistiques d’utilisation.
+* 🔐 **Authentification** : Connexion sécurisée pour les utilisateurs et bibliothécaires.
+* 🌐 **Design responsive** : Adapté à tous les appareils (mobile, tablette, ordinateur).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Stack Technique
 
-## Laravel Sponsors
+* **Langage** : PHP
+* **Frameworks** : Laravel, Livewire
+* **Outils** : Vite, Laravel Vite Plugin
+* **Base de données** : MySQL
+* **Frontend** : Blade, composants Livewire
+* **Backend** : Laravel
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 📦 Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### ⚙️ Prérequis
 
-## Contributing
+* PHP 8.1 ou supérieur
+* MySQL
+* Composer
+* Node.js et npm
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🚀 Démarrage rapide
 
-## Code of Conduct
+```bash
+# Cloner le dépôt
+git clone https://github.com/yourusername/BiblioTech.git
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Accéder au dossier du projet
+cd BiblioTech
 
-## Security Vulnerabilities
+# Installer les dépendances
+composer install
+npm install
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Copier le fichier d’environnement
+cp .env.example .env
 
-## License
+# Générer la clé de l’application
+php artisan key:generate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Lancer les migrations
+php artisan migrate
+
+# Démarrer le serveur local
+php artisan serve
+```
+
+### 🐳 Installation via Docker
+
+Utilisez le fichier `docker-compose.yml` fourni pour exécuter l’application dans un conteneur Docker.
+
+---
+
+## 🎯 Utilisation
+
+### Exemple simple
+
+```javascript
+// Exemple d’ajout d’un livre via l’API
+const book = {
+    titre: 'Gatsby le Magnifique',
+    nombre_exemplaires: 5,
+    description: 'Un roman de F. Scott Fitzgerald',
+    date_publication: '1925-04-10',
+    date_creation: '2023-10-01',
+    date_modification: '2023-10-01',
+    author_id: 1,
+    image: 'books/gatsby.jpg'
+};
+
+const response = await axios.post('/api/books', book);
+console.log(response.data);
+```
+
+### Utilisation avancée
+
+* Personnaliser les variables dans le fichier `.env`.
+* Consulter la documentation API pour des cas d’usage avancés.
+
+---
+
+## 📁 Structure du projet
+
+```
+BiblioTech/
+├── app/
+│   ├── Console/
+│   ├── Exceptions/
+│   ├── Http/
+│   ├── Livewire/
+│   ├── Models/
+│   └── Providers/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── views/
+│   └── ...
+├── routes/
+├── storage/
+├── tests/
+├── vendor/
+├── .env
+├── composer.json
+├── package.json
+├── README.md
+└── ...
+```
+
+---
+
+## 🔧 Configuration
+
+* Modifier le fichier `.env` pour adapter les paramètres à votre environnement.
+* Les fichiers du dossier `config/` contiennent toutes les options de configuration du projet.
+
+---
+
+## 🤝 Contribution
+
+* **Comment contribuer** : Clonez le dépôt, créez une branche et soumettez une pull request.
+* **Mise en place** : Suivez les étapes d’installation.
+* **Style de code** : Respectez la norme **PSR-12**.
+* **Avant de soumettre** : Testez et documentez votre code.
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence **MIT**.
+Consultez le fichier [LICENSE](LICENSE) pour plus d’informations.
+
+---
+
+## 👥 Auteurs & Contributeurs
+
+* **Mainteneur** : Tarma
+
+---
+
