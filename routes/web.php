@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::fallback(function () {
+    return redirect('/reservation');
+});
 
 Route::middleware('guest')->group(function () {
     // Login
